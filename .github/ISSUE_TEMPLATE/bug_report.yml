@@ -1,0 +1,62 @@
+name: 🐞 Bug report
+description: Something in Paste Me doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Please don't paste private clipboard contents** — describe them instead ("a PNG from Preview", "RTF from Pages").
+  - type: input
+    id: version
+    attributes:
+      label: Paste Me version
+      description: Settings ▸ About
+      placeholder: "1.1 (2)"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Capturing copies
+        - Pasting
+        - History panel / search
+        - Apps sidebar / paging
+        - Previews (code, images, rich text)
+        - Settings / fonts
+        - Global shortcuts
+        - iCloud sync
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Copy … from …
+        2. Press ⇧⌘V
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected vs. what happened
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Accessibility permission is granted (needed for pasting)
+        - label: Capture isn't paused and the source app isn't excluded

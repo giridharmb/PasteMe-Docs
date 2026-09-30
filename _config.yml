@@ -1,0 +1,6 @@
+# GitHub Pages: Settings ▸ Pages ▸ Deploy from branch "main", folder "/ (root)".
+title: Paste Me
+description: A native clipboard manager for macOS — privacy notice, support and documentation.
+theme: jekyll-theme-minimal
+exclude:
+  - release/screenshots/README.md
