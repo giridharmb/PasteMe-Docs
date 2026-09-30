@@ -11,6 +11,9 @@
 - **Code:** indentation is kept exactly as copied, with a configurable tab width, optional line wrapping and optional line numbers.
 - **iCloud settings sync:** settings follow you between Macs, and a fresh install restores settings and history automatically.
 
+### Pricing
+- Paste Me is free, with no in-app purchases, subscriptions or ads.
+
 ### Privacy
 - The Privacy Notice now covers settings sync through the iCloud key-value store.
 

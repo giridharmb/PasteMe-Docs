@@ -14,6 +14,7 @@
 - **"Paste As" transforms.** Change case, convert to camel/snake/kebab case, pretty-print or minify JSON, Base64 or URL encode/decode, make a Markdown link or code block, and more.
 - **Private by design.** Paste Me skips passwords that password managers mark as concealed, and ignores apps you exclude. It has no analytics, no tracking and no accounts. [Read the Privacy Notice](PRIVACY.md).
 - **Optional iCloud sync.** History, pins and settings sync through your own private iCloud. On a new Mac, everything restores automatically.
+- **Free.** No in-app purchases, subscriptions or ads. Every feature is included.
 - **Yours to tune.** Choose the layout (shelf or list), fonts, code theme, image background, page size, history size limits, retention and global shortcuts.
 
 ## Requirements

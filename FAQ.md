@@ -14,6 +14,9 @@ To press ⌘V in the app you're using. Without it, Paste Me still puts the item 
 **Can I find items by the app I copied them from?**
 Yes. Use the Apps sidebar in the panel, or ⌥↑ / ⌥↓ to step through apps. ⌘0 shows all apps again and ⌘G shows or hides the sidebar.
 
+**Does Paste Me cost anything?**
+No. Paste Me is free. It has no in-app purchases, subscriptions, ads or paid upgrades, and every feature is included.
+
 ## History and storage
 
 **How much history is kept?**

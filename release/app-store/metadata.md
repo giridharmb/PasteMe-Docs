@@ -6,13 +6,26 @@
 | **Subtitle** | Searchable clipboard history | 30 |
 | **Primary category** | Productivity | |
 | **Secondary category** | Developer Tools | |
-| **Price** | {{PRICE_TIER}} | |
+| **Price** | Free (USD 0.00, all territories) | |
+| **In-App Purchases** | None | |
+| **Subscriptions** | None | |
+| **Ads / tracking** | None | |
 | **Support URL** | https://giridharmb.github.io/PasteMe-Docs/SUPPORT | |
 | **Marketing URL** | https://giridharmb.github.io/PasteMe-Docs/ | |
 | **Privacy Policy URL** | https://giridharmb.github.io/PasteMe-Docs/PRIVACY | |
 | **Copyright** | © {{YEAR}} {{DEVELOPER_NAME}} | |
 | **SKU** | PASTEME-MAC-001 | |
 | **Bundle ID** | com.guy.PasteMe | |
+
+## Pricing and availability (App Store Connect)
+
+Paste Me is free. It has no in-app purchases, subscriptions, ads, trials or paid tiers.
+
+- **Pricing and Availability ▸ Price Schedule:** set the base price to **Free (USD 0.00)** for every country or region. Don't schedule any future price change.
+- **Monetization ▸ In-App Purchases / Subscriptions:** leave empty. Don't create products or subscription groups.
+- **Agreements:** only the Free Apps agreement is needed. You don't have to sign the Paid Apps agreement or add banking or tax information for Paste Me.
+- **App Privacy:** "Data Not Collected" stays accurate: there are no ads, no purchases and no analytics ([app-privacy.md](app-privacy.md)).
+- **Code:** the app doesn't link StoreKit and has no In-App Purchase capability. Keep it that way. The release checklist verifies this.
 
 ## Promotional text (170)
 
@@ -42,6 +55,9 @@ FIND IT FAST
 ORGANIZE
 • Pin favorite snippets and group them into color-coded pinboards
 • Rename items, drag them into other apps
+
+FREE, WITH NOTHING TO BUY
+• No in-app purchases, no subscriptions, no ads
 
 PRIVATE BY DESIGN
 • No accounts, no analytics, no tracking

@@ -23,6 +23,8 @@
 ## Store and docs
 - [ ] [metadata.md](app-store/metadata.md) updated: What's New, promo text
 - [ ] Screenshots current ([sizes](screenshots/README.md))
+- [ ] Price is **Free** in App Store Connect, and no In-App Purchases or subscriptions exist ([pricing](app-store/metadata.md#pricing-and-availability-app-store-connect))
+- [ ] No StoreKit in the build: `otool -L "Paste Me.app/Contents/MacOS/Paste Me" | grep -i storekit` prints nothing
 - [ ] App Privacy answers still accurate ([app-privacy.md](app-store/app-privacy.md))
 - [ ] Privacy Notice / Terms dated and published (GitHub Pages)
 - [ ] [CHANGELOG.md](../CHANGELOG.md) and GitHub release notes ([template](release-notes-template.md))
