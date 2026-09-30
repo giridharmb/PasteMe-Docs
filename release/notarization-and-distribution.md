@@ -25,12 +25,18 @@ The script:
 6. staples the ticket and checks it with Gatekeeper (`spctl`)
 7. writes `build/release/PasteMe-<version>.zip`
 
-## Optional: DMG
+## DMG
+`scripts/make-dmg.sh` in the code repository builds a styled drag-to-Applications DMG:
+- a Retina background and the app icon as the volume icon
+- signed with Developer ID, notarized, stapled and verified
+- a SHA-256 checksum file next to it
+
 ```bash
-hdiutil create -volname "Paste Me" -srcfolder "build/release/export/Paste Me.app" -ov -format UDZO build/release/PasteMe.dmg
-xcrun notarytool submit build/release/PasteMe.dmg --keychain-profile PasteMeNotary --wait
-xcrun stapler staple build/release/PasteMe.dmg
+scripts/make-dmg.sh --team {{TEAM_ID}} --notarize PasteMeNotary
+# → build/dmg/PasteMe-<version>.dmg (+ .sha256)
 ```
+
+Without `--team`, it makes an ad-hoc DMG for testing. That DMG includes instructions for opening the app despite Gatekeeper.
 
 ## Verify on a clean Mac
 ```bash
