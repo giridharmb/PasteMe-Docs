@@ -51,4 +51,21 @@ Yes. Images and large items count toward your iCloud storage. Lower the total hi
 No. See the [Privacy Notice](PRIVACY.md).
 
 **Are passwords saved?**
-Paste Me skips content that password managers mark as concealed, and excludes common password managers by default.
+No. Paste Me skips content that password managers mark as concealed, and it excludes common password managers by default.
+
+**How do I stop Paste Me from saving copies from an app?**
+Add the app in Settings ▸ Privacy ▸ Never Save Copies From, or right-click one of its items in the panel and choose **Never Save from …**. Paste Me then ignores copies made in that app, including one made just before you switch to another app. Paste Me also offers to delete what it already saved from the app.
+
+**Where can I read the Privacy Notice in the app?**
+In Settings ▸ Privacy ▸ Read Privacy Notice, in Settings ▸ About, or in the menu bar menu ▸ Privacy Notice.
+
+## Shortcuts and Quick Paste
+
+**What is Quick Paste?**
+Ten slots for the snippets you paste most. Press ⌃⌥V and then a number from 0 to 9, and Paste Me pastes that slot into the app you're using. Assign slots in Settings ▸ Quick Paste or from an item's right-click menu.
+
+**Another app uses the same shortcut. Which one wins?**
+Paste Me does. To let a specific app keep its own shortcuts, add it under Settings ▸ Shortcuts ▸ Let These Apps Keep Their Own Shortcuts. To turn all of Paste Me's shortcuts off, use the **Enable global shortcuts** switch at the top of that tab.
+
+**How do I start Paste Me at login?**
+Turn on Settings ▸ General ▸ Start Paste Me at login, or choose **Start at Login** in the menu bar menu. If macOS asks for approval, click **Open Login Items** and turn Paste Me on there. Keep the app in your Applications folder so the login item keeps working.

@@ -51,6 +51,7 @@ FIND IT FAST
 • Apps sidebar: browse clips by the app you copied from, with Option-arrow keys
 • Filter by type: images, links, code, files, colors
 • Full keyboard control, Quick Look preview and ⌘1–⌘9 quick paste
+• Quick Paste: ⌃⌥V then 0–9 pastes one of ten favorite snippets in any app
 
 ORGANIZE
 • Pin favorite snippets and group them into color-coded pinboards
@@ -68,7 +69,8 @@ PRIVATE BY DESIGN
 YOURS TO TUNE
 • Shelf or list layout, light or dark, custom fonts
 • History limits: retention, item count, page size, total size
-• Customizable global shortcuts
+• Customizable global shortcuts, with a master switch and apps that keep their own keys
+• Start at login
 
 Paste Me needs Accessibility permission only to press ⌘V for you. Without it, items are still copied to your clipboard.
 

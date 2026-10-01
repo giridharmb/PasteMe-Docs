@@ -1,6 +1,6 @@
 # Paste Me Privacy Notice
 
-**Effective date:** {{EFFECTIVE_DATE}} · **Applies to:** Paste Me for macOS, version 1.1 and later
+**Effective date:** {{EFFECTIVE_DATE}} · **Applies to:** Paste Me for macOS, version 1.2 and later. The same notice is built into the app: Settings ▸ Privacy ▸ Read Privacy Notice.
 
 Paste Me is a clipboard manager. Its whole job is to remember what you copy, so this notice explains exactly what it stores, where, and who can see it.
 
@@ -13,14 +13,14 @@ Paste Me is a clipboard manager. Its whole job is to remember what you copy, so 
 | Items you copy: text, rich text, code, links, images, file references, colors | To show your history and paste items back | On your Mac: `~/Library/Application Support/Paste Me/` |
 | Details about each item: time copied, source app name and bundle ID, size, detected type/language, your pins, titles and pinboards | Search, grouping by app, sorting, retention | Same place |
 | Link titles and icons (optional) | To show readable link previews | Same place |
-| Your settings | To remember your preferences | macOS preferences (`com.guy.PasteMe`) |
+| Your settings, including which items are in your Quick Paste slots | To remember your preferences | macOS preferences (`com.guy.PasteMe`) |
 
 File items store the file's location (a file URL), not a copy of the file.
 
 ### What Paste Me never stores
 
 - **Content from password managers and other apps that mark clipboard data as concealed or transient** ([nspasteboard.org](http://nspasteboard.org) conventions). This is on by default.
-- **Anything copied while an excluded app is in front.** 1Password, Bitwarden, LastPass, Dashlane, KeePassXC, Keychain Access and Passwords are excluded by default. You can add any app.
+- **Anything copied while an excluded app is in front**, or while it was in front moments before the copy was detected, or that the copying app labels as coming from an excluded app (`org.nspasteboard.source`). 1Password, Bitwarden, LastPass, Dashlane, KeePassXC, Keychain Access and Passwords are excluded by default. You can add any app. When you do, Paste Me offers to delete what it already saved from that app.
 - **Anything copied while capture is paused.**
 
 ## 2. What leaves your Mac
@@ -36,6 +36,7 @@ Data leaves your Mac only in these cases:
 ## 3. Permissions
 
 - **Accessibility.** Used only to send ⌘V (paste) and, for the optional "Copy selection & pin it" shortcut, ⌘C to the app you're using. Paste Me does not read your screen or record your keystrokes. Without this permission, Paste Me still copies items to the clipboard for you to paste manually. [More details](release/accessibility-permission.md).
+- **Keyboard shortcuts.** Global shortcuts are registered with macOS and react only to the exact key combinations you set. They are not a keylogger. After the Quick Paste shortcut, Paste Me briefly listens for the number keys and Esc (2 seconds by default), then releases them.
 - **Clipboard.** macOS lets apps read the clipboard. Paste Me checks it for changes several times a second while capture is on, and only while the app is running.
 - **Launch at login (optional).** Managed through macOS Login Items.
 
@@ -47,7 +48,7 @@ You decide. Settings ▸ History has these limits:
 - **Maximum number of items:** the default is 1,000.
 - **Total history size:** the default is 1 GB. The oldest items are removed first.
 
-Pinned items and pinboards are kept until you delete them. You can also clear your history, delete everything, or have history cleared every time you quit (Settings ▸ Privacy).
+Pinned items, pinboards and Quick Paste items are kept until you delete them. You can also clear your history, delete everything, or have history cleared every time you quit (Settings ▸ Privacy).
 
 ## 5. Your choices and controls
 
