@@ -18,4 +18,4 @@ Include your macOS version, your Paste Me version (Settings ▸ About), and step
 
 ## Contact
 
-{{CONTACT_EMAIL}}. We aim to reply within {{RESPONSE_TIME}}.
+Open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues>. Paste Me is maintained by one developer, so replies usually take up to a week.

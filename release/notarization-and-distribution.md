@@ -5,7 +5,8 @@
 2. Store notarization credentials in the keychain:
    ```bash
    xcrun notarytool store-credentials PasteMeNotary \
-     --apple-id "{{APPLE_ID}}" --team-id "{{TEAM_ID}}" --password "{{APP_SPECIFIC_PASSWORD}}"
+     --apple-id "YOUR_APPLE_ID_EMAIL" --team-id "YOUR_TEAM_ID"
+   # notarytool asks for the app-specific password; never put it in a file or a command you save
    ```
 3. For iCloud sync in Developer ID builds, enable iCloud (CloudKit + key-value storage) for the App ID `com.guy.PasteMe` in Certificates, Identifiers & Profiles, and create the container `iCloud.com.guy.PasteMe`.
 
@@ -13,7 +14,7 @@
 Run this from the code repository:
 
 ```bash
-TEAM_ID={{TEAM_ID}} scripts/release.sh PasteMeNotary
+TEAM_ID=YOUR_TEAM_ID scripts/release.sh PasteMeNotary
 ```
 
 The script:
@@ -32,7 +33,7 @@ The script:
 - a SHA-256 checksum file next to it
 
 ```bash
-scripts/make-dmg.sh --team {{TEAM_ID}} --notarize PasteMeNotary
+scripts/make-dmg.sh --team YOUR_TEAM_ID --notarize PasteMeNotary
 # → build/dmg/PasteMe-<version>.dmg (+ .sha256)
 ```
 

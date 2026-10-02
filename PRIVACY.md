@@ -1,6 +1,6 @@
 # Paste Me Privacy Notice
 
-**Effective date:** {{EFFECTIVE_DATE}} · **Applies to:** Paste Me for macOS, version 1.2 and later. The same notice is built into the app: Settings ▸ Privacy ▸ Read Privacy Notice.
+**Effective date:** October 1, 2026 · **Applies to:** Paste Me for macOS, version 1.2 and later. The same notice is built into the app: Settings ▸ Privacy ▸ Read Privacy Notice.
 
 Paste Me is a clipboard manager. Its whole job is to remember what you copy, so this notice explains exactly what it stores, where, and who can see it.
 
@@ -71,4 +71,4 @@ If this notice changes, the new version and date are published in this repositor
 
 ## 9. Contact
 
-{{DEVELOPER_NAME}} · {{CONTACT_EMAIL}} · or open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues>.
+Giridhar Bhujanga. Open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues>.

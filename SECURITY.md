@@ -2,13 +2,13 @@
 
 ## Reporting a vulnerability
 
-Please **don't open a public issue** for security problems. Email {{SECURITY_EMAIL}} with:
+Please **don't open a public issue** for security problems. Report it privately through GitHub: [Report a vulnerability](https://github.com/giridharmb/PasteMe-Docs/security/advisories/new). Include:
 
 - a description of the issue and its impact
 - steps to reproduce it (macOS version, Paste Me version)
 - any proof-of-concept, **with any clipboard contents redacted**
 
-You'll get an acknowledgement within {{ACK_TIME}}. We'll keep you updated until the issue is fixed, and we'll credit you in the changelog if you'd like.
+You'll get an acknowledgement within a week. We'll keep you updated until the issue is fixed, and we'll credit you in the changelog if you'd like.
 
 ## Scope
 

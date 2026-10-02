@@ -1,8 +1,8 @@
 # Paste Me Terms of Use
 
-**Effective date:** {{EFFECTIVE_DATE}}
+**Effective date:** October 1, 2026
 
-These terms govern your use of the Paste Me application for macOS ("the App"), provided by {{DEVELOPER_NAME}} ("we").
+These terms govern your use of the Paste Me application for macOS ("the App"), provided by Giridhar Bhujanga ("we").
 
 1. **License.** We grant you a personal, non-exclusive, non-transferable license to install and use the App on Macs you own or control. If you got the App from the Mac App Store, Apple's [Licensed Application End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) also applies. If these terms conflict with it, the Apple EULA wins for App Store copies.
 2. **Price.** The App is free of charge. It has no in-app purchases, subscriptions or advertising, and we won't charge you for the version you have installed.
@@ -12,6 +12,6 @@ These terms govern your use of the Paste Me application for macOS ("the App"), p
 6. **No warranty.** The App is provided "as is", without warranties of any kind, to the extent the law allows. Clipboard managers keep copies of what you copy. Use the App's privacy controls for sensitive material.
 7. **Limitation of liability.** To the extent the law allows, we are not liable for any indirect or consequential damages, or for any loss of data, arising from use of the App.
 8. **Changes.** We may update these terms. Continuing to use the App after an update means you accept the new terms.
-9. **Contact.** {{CONTACT_EMAIL}}
+9. **Contact.** Open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues>.
 
 *This template is not legal advice. Have it reviewed for your jurisdiction before publishing.*

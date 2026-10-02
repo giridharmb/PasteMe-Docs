@@ -50,7 +50,7 @@ Then fill in the listing from [metadata.md](metadata.md): subtitle, promotional 
 - **Age rating:** see [age-rating.md](age-rating.md).
 - **Category:** Productivity (secondary: Developer Tools).
 
-The support, marketing and privacy URLs must be live before you submit. Publish this repository with GitHub Pages first (Settings ▸ Pages ▸ Deploy from a branch ▸ `main`, `/ (root)`), and replace every `{{...}}` placeholder.
+The support, marketing and privacy URLs must be live before you submit. Publish this repository with GitHub Pages first: Settings ▸ Pages ▸ Deploy from a branch ▸ `main`, `/ (root)`.
 
 ## 3. iCloud (CloudKit)
 
@@ -101,7 +101,7 @@ At least one 16:10 screenshot: 1280×800, 1440×900, 2560×1600 or 2880×1800. S
 >
 > The app is free. It has no accounts, no purchases, no ads and no analytics. Clipboard data stays on the user's Mac and, if they turn on sync, in their private iCloud database.
 
-**Contact information:** your name, phone and email.
+**Contact information:** your name, phone and email. Apple uses these only to reach you during review; they are not shown on the store.
 
 ## 8. Submit
 

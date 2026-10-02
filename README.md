@@ -42,4 +42,4 @@ Open an issue using the [bug report](https://github.com/giridharmb/PasteMe-Docs/
 
 ---
 
-Documentation © {{YEAR}} {{DEVELOPER_NAME}}, licensed under [CC BY 4.0](LICENSE). “Paste Me” and the Paste Me icon are not covered by that license. macOS and iCloud are trademarks of Apple Inc.
+Documentation © 2026 Giridhar Bhujanga, licensed under [CC BY 4.0](LICENSE). “Paste Me” and the Paste Me icon are not covered by that license. macOS and iCloud are trademarks of Apple Inc.

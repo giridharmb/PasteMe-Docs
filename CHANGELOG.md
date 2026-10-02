@@ -1,6 +1,8 @@
 # Changelog
 
-## 1.2 — {{RELEASE_DATE}}
+## 1.2 — October 2026
+
+The first public release.
 
 ### New
 - **Quick Paste:** press ⌃⌥V and then 0–9 to paste one of ten saved snippets into any app. A small overlay shows your slots while Paste Me waits. Assign slots in Settings ▸ Quick Paste, from an item's right-click menu, or from the menu bar.
@@ -18,7 +20,7 @@
 - **Choosing an item pastes it.** Click an item, or press ↩, and Paste Me switches back to the app you were using and pastes. A single click now does this by default; you can switch back to double-click in Settings ▸ General. If macOS hasn't given Paste Me Accessibility access, a notice explains that the item was copied and how to fix it.
 - **Never Save Copies From** now also catches a copy made just before you switch away from an excluded app, and it honors apps that label their copies with `org.nspasteboard.source`. When you exclude an app, Paste Me offers to delete what it already saved from it.
 
-## 1.1 — {{RELEASE_DATE}}
+## 1.1 — September 2026 (development build, not released publicly)
 
 ### New
 - **Apps sidebar:** browse history grouped by the app you copied from. ⌥↑ / ⌥↓ switch apps, ⌘0 shows all apps, ⌘G toggles the sidebar.
@@ -35,6 +37,6 @@
 ### Privacy
 - The Privacy Notice now covers settings sync through the iCloud key-value store.
 
-## 1.0 — {{RELEASE_DATE_1_0}}
+## 1.0 — September 2026 (development build, not released publicly)
 
 - First release: clipboard history with rich previews, syntax-highlighted code, pins and pinboards, "Paste As" transforms, global shortcuts, shelf and list layouts, privacy exclusions and iCloud history sync.

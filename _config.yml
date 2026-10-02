@@ -2,5 +2,10 @@
 title: Paste Me
 description: A native clipboard manager for macOS — privacy notice, support and documentation.
 theme: jekyll-theme-minimal
+# Files with {{PLACEHOLDER}} text are left out of the site: Jekyll would read the braces as template code.
+# They are still readable in the repository on GitHub.
 exclude:
+  - TEMPLATES.md
+  - release/release-notes-template.md
+  - release/release-checklist.md
   - release/screenshots/README.md

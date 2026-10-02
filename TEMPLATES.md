@@ -1,16 +1,24 @@
-# Filling in the templates
+# Templates
 
-Search for `{{` and replace each placeholder:
+The documents in this repository are filled in. Only the per-release templates still contain `{{PLACEHOLDER}}` values, which you replace each time you ship:
 
-| Placeholder | Example |
+| File | Placeholders |
 |---|---|
-| `{{DEVELOPER_NAME}}` | Your legal or trading name |
-| `{{CONTACT_EMAIL}}`, `{{SECURITY_EMAIL}}` | support@example.com |
-| `{{EFFECTIVE_DATE}}`, `{{RELEASE_DATE}}`, `{{RELEASE_DATE_1_0}}`, `{{YEAR}}` | 2026-10-01 |
-| `{{RESPONSE_TIME}}`, `{{ACK_TIME}}` | 2 business days |
-| `{{TEAM_ID}}`, `{{APPLE_ID}}`, `{{APP_SPECIFIC_PASSWORD}}` | App Store / developer account values (never commit real passwords) |
-| `{{VERSION}}`, `{{ONE_LINE_SUMMARY}}`, `{{FEATURE}}`, … | Per release |
+| [release/release-notes-template.md](release/release-notes-template.md) | `{{VERSION}}`, `{{ONE_LINE_SUMMARY}}`, `{{FEATURE}}`, `{{IMPROVEMENT}}`, `{{FIX}}`, `{{DOWNLOAD_LINK}}` |
+| [release/release-checklist.md](release/release-checklist.md) | `{{VERSION}}` |
+
+To list what's left:
 
 ```bash
 grep -rn "{{" --include=*.md .
 ```
+
+## If you fork these documents
+
+Change these to your own details:
+
+- the developer name in [README.md](README.md), [PRIVACY.md](PRIVACY.md), [TERMS.md](TERMS.md) and the copyright line in [release/app-store/metadata.md](release/app-store/metadata.md)
+- the effective dates in [PRIVACY.md](PRIVACY.md) and [TERMS.md](TERMS.md)
+- the contact links (GitHub issues) in [SUPPORT.md](SUPPORT.md), [SECURITY.md](SECURITY.md), [TERMS.md](TERMS.md), [PRIVACY.md](PRIVACY.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
+Never commit real passwords, app-specific passwords or API keys.
