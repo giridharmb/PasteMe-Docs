@@ -13,7 +13,7 @@
 | **Support URL** | https://giridharmb.github.io/PasteMe-Docs/SUPPORT | |
 | **Marketing URL** | https://giridharmb.github.io/PasteMe-Docs/ | |
 | **Privacy Policy URL** | https://giridharmb.github.io/PasteMe-Docs/PRIVACY | |
-| **Copyright** | © {{YEAR}} {{DEVELOPER_NAME}} | |
+| **Copyright** | © 2026 Giridhar Bhujanga (must match `NSHumanReadableCopyright` in the app) | |
 | **SKU** | PASTEME-MAC-001 | |
 | **Bundle ID** | com.guy.PasteMe | |
 
@@ -91,4 +91,4 @@ See the [Changelog](../../CHANGELOG.md). Paste the current version's entries her
 >
 > No account or login is required. iCloud sync is optional (Settings ▸ iCloud).
 
-> **Sandbox note:** the Mac App Store requires App Sandbox. Posting synthetic key events from a sandboxed app is permitted with Accessibility approval, but test the sandboxed build before you submit: enable App Sandbox in `PasteMe.entitlements` for the App Store configuration. The Developer ID build ships without the sandbox.
+> App Sandbox is enabled in the App Store build. Pasting sends ⌘V with CGEvent, which macOS allows after the user turns on Accessibility. The full review note, with the list of entitlements, is in the [submission guide](submission-guide.md#7-app-review-information).

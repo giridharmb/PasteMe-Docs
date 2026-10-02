@@ -10,7 +10,7 @@ Paste Me is a clipboard manager. Its whole job is to remember what you copy, so 
 
 | Data | Why | Where |
 |---|---|---|
-| Items you copy: text, rich text, code, links, images, file references, colors | To show your history and paste items back | On your Mac: `~/Library/Application Support/Paste Me/` |
+| Items you copy: text, rich text, code, links, images, file references, colors | To show your history and paste items back | On your Mac: `~/Library/Application Support/Paste Me/`. The Mac App Store version keeps it in its own container: `~/Library/Containers/com.guy.PasteMe/Data/Library/Application Support/Paste Me/` |
 | Details about each item: time copied, source app name and bundle ID, size, detected type/language, your pins, titles and pinboards | Search, grouping by app, sorting, retention | Same place |
 | Link titles and icons (optional) | To show readable link previews | Same place |
 | Your settings, including which items are in your Quick Paste slots | To remember your preferences | macOS preferences (`com.guy.PasteMe`) |
@@ -55,7 +55,7 @@ Pinned items, pinboards and Quick Paste items are kept until you delete them. Yo
 - **Delete items:** delete any item (⌘⌫), clear your history, or delete everything (Settings ▸ History).
 - **Export or import:** export your history or pinned items as a JSON file you control (Settings ▸ Advanced).
 - **iCloud data:** turn off iCloud sync and delete the data Paste Me stored there under System Settings ▸ Apple ID ▸ iCloud ▸ Manage.
-- **Remove all local data:** quit Paste Me and delete `~/Library/Application Support/Paste Me/`.
+- **Remove all local data:** quit Paste Me and delete `~/Library/Application Support/Paste Me/`. For the Mac App Store version, delete `~/Library/Containers/com.guy.PasteMe/` instead.
 
 ## 6. Children
 

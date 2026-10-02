@@ -5,6 +5,7 @@ Templates and reference documents for shipping Paste Me. Replace every `{{PLACEH
 | File | Use |
 |---|---|
 | [release-checklist.md](release-checklist.md) | Step-by-step checklist for each release |
+| [app-store/submission-guide.md](app-store/submission-guide.md) | Step-by-step Mac App Store submission: sandbox test, app record, iCloud, upload, review notes |
 | [app-store/metadata.md](app-store/metadata.md) | Mac App Store listing text, keywords, categories and review notes |
 | [app-store/app-privacy.md](app-store/app-privacy.md) | Answers for App Store Connect ▸ App Privacy ("Data Not Collected") |
 | [app-store/export-compliance.md](app-store/export-compliance.md) | Encryption / export compliance answers |

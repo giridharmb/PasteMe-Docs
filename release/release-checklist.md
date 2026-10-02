@@ -18,7 +18,8 @@
 - [ ] iCloud entitlements (`PasteMe-iCloud.entitlements`) selected for the release build
 - [ ] CloudKit schema **deployed to Production** in the CloudKit Console (Development ▸ Deploy Schema Changes)
 - [ ] Developer ID build: `TEAM_ID=… scripts/release.sh` → notarized, stapled, `spctl --assess` passes
-- [ ] App Store build: uploaded through Xcode Organizer; Transporter validation passes
+- [ ] App Store build: `scripts/appstore.sh sandbox` tested by hand (pasting, file items after relaunch, link previews, export/import)
+- [ ] App Store build: `scripts/appstore.sh upload --team … --build N` succeeds and the build finishes processing ([submission guide](app-store/submission-guide.md))
 
 ## Store and docs
 - [ ] [metadata.md](app-store/metadata.md) updated: What's New, promo text
