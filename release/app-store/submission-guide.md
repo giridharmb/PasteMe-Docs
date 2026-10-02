@@ -10,6 +10,14 @@ The App Store build is sandboxed. It is produced by `scripts/appstore.sh` in the
 - Xcode 16 or later, signed in under Xcode ▸ Settings ▸ Accounts with a role that can upload (Account Holder, Admin or App Manager).
 - The bundle ID `com.guy.PasteMe` registered to your team. Xcode registers it during the first archive. If it is already taken by someone else, pick another one and change it in three places: the Xcode target, `PasteMe-AppStore.entitlements` (iCloud container) and `Persistence.cloudKitContainerID`.
 
+### One-time setup in the developer portal
+
+Do these before the first archive. Without them the archive fails with "Your team has no devices from which to generate a provisioning profile" or "Provisioning profile doesn't match the entitlements file's value for the com.apple.developer.icloud-container-identifiers entitlement".
+
+1. **Register your Mac.** Run `system_profiler SPHardwareDataType | grep "Provisioning UDID"`, then add the device at [Devices ▸ +](https://developer.apple.com/account/resources/devices/add) with platform macOS.
+2. **Create the iCloud container.** [Identifiers ▸ iCloud Containers ▸ +](https://developer.apple.com/account/resources/identifiers/list/cloudContainer), identifier `iCloud.com.guy.PasteMe`.
+3. **Turn on iCloud and push for the app.** [Identifiers](https://developer.apple.com/account/resources/identifiers/list) ▸ `com.guy.PasteMe` ▸ tick **iCloud** (with CloudKit) ▸ Configure ▸ select the container ▸ tick **Push Notifications** ▸ Save.
+
 ## 1. Test the sandboxed build locally
 
 ```bash
@@ -54,11 +62,17 @@ The support, marketing and privacy URLs must be live before you submit. Publish 
 
 ## 3. iCloud (CloudKit)
 
-1. The first archive with your team creates the container `iCloud.com.guy.PasteMe`.
-2. Run the archived app once from Xcode's Organizer, or a development build with `PasteMe-AppStore.entitlements`, with iCloud sync on. Copy a few things. This creates the record types in the **Development** environment.
-3. In the [CloudKit Console](https://icloud.developer.apple.com) ▸ your container ▸ Schema ▸ **Deploy Schema Changes…** to Production.
+App Store and TestFlight builds use CloudKit's **Production** environment, which starts empty. The record types have to be created in **Development** first and then deployed.
 
-If you skip step 3, sync silently does nothing for App Store users.
+1. After `scripts/appstore.sh archive` or `upload`, run the archived copy. It is signed for development, so it talks to the Development environment:
+   ```bash
+   open "build/appstore/PasteMe.xcarchive/Products/Applications/Paste Me.app"
+   ```
+2. In that copy: Settings ▸ iCloud ▸ turn on **Sync clipboard history with iCloud** ▸ **Restart Now**. Then copy some text, an image and a file, pin an item and create a pinboard, so every record type is created. Wait a minute.
+3. In the [CloudKit Console](https://icloud.developer.apple.com) ▸ `iCloud.com.guy.PasteMe` ▸ Development ▸ Schema ▸ Record Types, check that the `CD_ClipItem`, `CD_ClipRepresentation` and `CD_Pinboard` types exist.
+4. **Deploy Schema Changes…** to Production.
+
+If you skip step 4, sync silently does nothing for App Store and TestFlight users.
 
 ## 4. Upload a build
 
