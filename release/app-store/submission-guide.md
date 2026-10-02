@@ -97,7 +97,7 @@ Install the processed build through TestFlight on a second Mac, or a second user
 
 ## 6. Screenshots
 
-At least one 16:10 screenshot: 1280×800, 1440×900, 2560×1600 or 2880×1800. See the [shot list](../screenshots/README.md).
+At least one 16:10 screenshot: 1280×800, 1440×900, 2560×1600 or 2880×1800. Run `scripts/screenshots.sh` in the app repository to generate four from demo data (nothing from your own clipboard), then drag them from `build/screenshots/` into **App Previews and Screenshots**. See the [screenshot notes](../screenshots/README.md).
 
 ## 7. App Review information
 
