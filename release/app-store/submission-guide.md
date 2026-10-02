@@ -37,7 +37,7 @@ In [App Store Connect](https://appstoreconnect.apple.com) ▸ Apps ▸ **+** ▸
 | Field | Value |
 |---|---|
 | Platform | macOS |
-| Name | Paste Me — Clipboard Manager (must be unique on the store) |
+| Name | Paste-Me ("Paste Me" was already taken on the store) |
 | Primary language | English (U.S.) |
 | Bundle ID | com.guy.PasteMe |
 | SKU | PASTEME-MAC-001 |
@@ -112,7 +112,8 @@ Select the build under the macOS version, answer the export-compliance question 
 | Topic | Answer |
 |---|---|
 | "Why does the app need Accessibility?" (Guideline 2.4.5) | Use the note above: only to send ⌘V; the app works in copy-only mode without it. |
-| Name too close to another app (Guideline 4.1) | There is an existing clipboard manager called "Paste". If the name is rejected, choose a more distinct one and update `CFBundleDisplayName` and the listing. |
+| Name too close to another app (Guideline 4.1) | The store name is "Paste-Me". There is an existing clipboard manager called "Paste", so a reviewer may still ask for a more distinct name. If so, choose one and update `CFBundleDisplayName` and the listing. |
+| Store name and app name differ | The store listing says "Paste-Me" and the installed app says "Paste Me". Apple accepts small differences like this; if a reviewer objects, set `CFBundleDisplayName` to "Paste-Me". |
 | Launch at login | Off by default; the user turns it on in Settings ▸ General. |
 | The app has no window | It is a menu bar app with Settings and a history panel; a Dock icon can be turned on in Settings ▸ General. |
 

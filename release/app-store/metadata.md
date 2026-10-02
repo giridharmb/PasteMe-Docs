@@ -2,7 +2,7 @@
 
 | Field | Value | Limit |
 |---|---|---|
-| **Name** | Paste Me — Clipboard Manager | 30 |
+| **Name** | Paste-Me (the App Store name; "Paste Me" was already taken. The app itself is still called "Paste Me" on the Mac) | 30 |
 | **Subtitle** | Searchable clipboard history | 30 |
 | **Primary category** | Productivity | |
 | **Secondary category** | Developer Tools | |
