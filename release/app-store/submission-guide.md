@@ -62,17 +62,22 @@ The support, marketing and privacy URLs must be live before you submit. Publish 
 
 ## 3. iCloud (CloudKit)
 
-App Store and TestFlight builds use CloudKit's **Production** environment, which starts empty. The record types have to be created in **Development** first and then deployed.
+App Store and TestFlight builds use CloudKit's **Production** environment, which starts empty. The schema (record types and their fields) has to be created in **Development** first and then deployed.
 
-1. After `scripts/appstore.sh archive` or `upload`, run the archived copy. It is signed for development, so it talks to the Development environment:
-   ```bash
-   open "build/appstore/PasteMe.xcarchive/Products/Applications/Paste Me.app"
-   ```
-2. In that copy: Settings ▸ iCloud ▸ turn on **Sync clipboard history with iCloud** ▸ **Restart Now**. Then copy some text, an image and a file, pin an item and create a pinboard, so every record type is created. Wait a minute.
-3. In the [CloudKit Console](https://icloud.developer.apple.com) ▸ `iCloud.com.guy.PasteMe` ▸ Development ▸ Schema ▸ Record Types, check that the `CD_ClipItem`, `CD_ClipRepresentation` and `CD_Pinboard` types exist.
-4. **Deploy Schema Changes…** to Production.
+CloudKit only creates a record type or a field when a record with a value for it is saved. Using the app by hand therefore leaves gaps: no `CD_Pinboard` until you make a pinboard, and no field for anything that happened to be empty. So let the app create the whole schema:
 
-If you skip step 4, sync silently does nothing for App Store and TestFlight users.
+```bash
+scripts/appstore.sh schema --team YOUR_TEAM_ID
+```
+
+It builds a development-signed copy with iCloud and runs it once with `-PasteMeInitCloudKitSchema`, which writes one sample record of every type with every field, then removes it. Your history isn't touched. It needs an iCloud account signed in on the Mac.
+
+Then, in the [CloudKit Console](https://icloud.developer.apple.com) ▸ `iCloud.com.guy.PasteMe`:
+
+1. Development ▸ Schema ▸ Record Types: check that `CD_ClipItem`, `CD_ClipRepresentation` and `CD_Pinboard` exist.
+2. **Deploy Schema Changes…** ▸ review ▸ Deploy.
+
+If you skip the deploy, sync silently does nothing for App Store and TestFlight users. Repeat both steps whenever the data model changes. A deployed schema can only be added to, never reduced.
 
 ## 4. Upload a build
 
