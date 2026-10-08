@@ -72,7 +72,7 @@ YOURS TO TUNE
 • Customizable global shortcuts, with a master switch and apps that keep their own keys
 • Start at login
 
-Paste Me needs Accessibility permission only to press ⌘V for you. Without it, items are still copied to your clipboard.
+Choose an item and it's on your clipboard, ready to paste with ⌘V. No special permissions needed.
 
 ## Keywords (100)
 
@@ -87,8 +87,8 @@ See the [Changelog](../../CHANGELOG.md). Paste the current version's entries her
 > Paste Me is a clipboard manager. To review it:
 > 1. Launch the app. A menu bar icon appears and Settings opens.
 > 2. Copy some text in any app, then press ⇧⌘V to open the history panel.
-> 3. Press Return to paste. This needs **Accessibility** permission (System Settings ▸ Privacy & Security ▸ Accessibility). Paste Me uses it only to send ⌘V/⌘C to the frontmost app. Without the permission, the chosen item is copied to the clipboard instead.
+> 3. Press Return (or click an item) to copy it, then press ⌘V to paste. The App Store build doesn't use Accessibility and never presses keys in other apps.
 >
 > No account or login is required. iCloud sync is optional (Settings ▸ iCloud).
 
-> App Sandbox is enabled in the App Store build. Pasting sends ⌘V with CGEvent, which macOS allows after the user turns on Accessibility. The full review note, with the list of entitlements, is in the [submission guide](submission-guide.md#7-app-review-information).
+> App Sandbox is enabled in the App Store build, which is compiled with `APP_STORE`: no Accessibility, no synthetic keystrokes (Guideline 2.4.5). The full review note, with the list of entitlements, is in the [submission guide](submission-guide.md#7-app-review-information).

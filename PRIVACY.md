@@ -35,7 +35,7 @@ Data leaves your Mac only in these cases:
 
 ## 3. Permissions
 
-- **Accessibility.** Used only to send ⌘V (paste) and, for the optional "Copy selection & pin it" shortcut, ⌘C to the app you're using. Paste Me does not read your screen or record your keystrokes. Without this permission, Paste Me still copies items to the clipboard for you to paste manually. [More details](release/accessibility-permission.md).
+- **Accessibility.** Used only to send ⌘V (paste) and, for the optional "Copy selection & pin it" shortcut, ⌘C to the app you're using. Paste Me does not read your screen or record your keystrokes. Without this permission, Paste Me still copies items to the clipboard for you to paste manually. The Mac App Store version doesn't use Accessibility: choosing an item copies it, and you paste it with ⌘V. [More details](release/accessibility-permission.md).
 - **Keyboard shortcuts.** Global shortcuts are registered with macOS and react only to the exact key combinations you set. They are not a keylogger. After the Quick Paste shortcut, Paste Me briefly listens for the number keys and Esc (2 seconds by default), then releases them.
 - **Clipboard.** macOS lets apps read the clipboard. Paste Me checks it for changes several times a second while capture is on, and only while the app is running.
 - **Launch at login (optional).** Managed through macOS Login Items.

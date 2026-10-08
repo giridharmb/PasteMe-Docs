@@ -1,5 +1,7 @@
 # Why Paste Me asks for Accessibility access
 
+> This applies to the direct-download version. The Mac App Store version never asks for Accessibility: choosing an item copies it, and you paste it with ⌘V.
+
 When you choose an item in Paste Me, it does two things:
 
 1. puts the item on the clipboard

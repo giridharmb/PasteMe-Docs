@@ -29,8 +29,8 @@ open "build/appstore/DerivedData/Build/Products/Release/Paste Me.app"
 This copy is sandboxed but has no iCloud (iCloud needs your team's provisioning profile). Check each item:
 
 - [ ] Settings ▸ Advanced ▸ Pasting Diagnostics says **App Sandbox: on**
-- [ ] Accessibility: turn it on for this copy, then **Test Paste in 3 Seconds** pastes into TextEdit
-- [ ] ⇧⌘V, click an item: it pastes into the app you were using
+- [ ] No Accessibility prompt at any point (the App Store build is compiled with `APP_STORE`)
+- [ ] ⇧⌘V, click an item: it is copied and a "Copied — press ⌘V" notice appears; ⌘V pastes it
 - [ ] Quick Paste: ⌃⌥V then a digit
 - [ ] Copy a file in Finder, quit and reopen Paste Me, paste the file from history into Finder and into Mail
 - [ ] A copied link gets its title and icon (network access)
@@ -105,14 +105,14 @@ At least one 16:10 screenshot: 1280×800, 1440×900, 2560×1600 or 2880×1800. R
 
 **Notes** (paste this):
 
-> Paste Me is a clipboard manager. It keeps a history of what the user copies and pastes a chosen item back into the app they are using.
+> Paste Me is a clipboard manager. It keeps a history of what the user copies and puts a chosen item back on the clipboard.
 >
 > How to test:
 > 1. Launch the app. A menu bar icon appears and Settings opens.
 > 2. Copy some text in any app, then press Shift-Command-V. The history panel opens.
-> 3. Click an item (or press Return) to paste it into the frontmost app.
+> 3. Click an item (or press Return). It is copied to the clipboard and a "Copied" notice appears. Press Command-V to paste it.
 >
-> Accessibility permission: pasting works by sending the Command-V keystroke to the frontmost app with CGEvent, which macOS only allows after the user turns on Paste Me under System Settings > Privacy & Security > Accessibility. The app asks for this the first time the user pastes and explains why. Without the permission the chosen item is still copied to the clipboard and the app tells the user to press Command-V. The app does not read the screen, does not record keystrokes and does not use the Accessibility API to inspect other apps.
+> Accessibility: not used. This build doesn't request Accessibility access and doesn't send keystrokes to other apps (Guideline 2.4.5).
 >
 > Global shortcuts are registered with RegisterEventHotKey and react only to the combinations the user sets.
 >
@@ -130,7 +130,8 @@ Select the build under the macOS version, answer the export-compliance question 
 
 | Topic | Answer |
 |---|---|
-| "Why does the app need Accessibility?" (Guideline 2.4.5) | Use the note above: only to send ⌘V; the app works in copy-only mode without it. |
+| Accessibility (Guideline 2.4.5) | Rejected for build 1.2 (4): Apple doesn't accept Accessibility for pressing ⌘V. Since build 6 the App Store build is compiled with `APP_STORE` and doesn't use Accessibility at all; `appstore.sh check` and CI verify the binary. |
+| Support URL (Guideline 1.5) | Rejected for build 1.2 (4) because the page only offered GitHub issues. The support page now lists an email address. |
 | Name too close to another app (Guideline 4.1) | The store name is "Paste-Me". There is an existing clipboard manager called "Paste", so a reviewer may still ask for a more distinct name. If so, choose one and update `CFBundleDisplayName` and the listing. |
 | Store name and app name differ | The store listing says "Paste-Me" and the installed app says "Paste Me". Apple accepts small differences like this; if a reviewer objects, set `CFBundleDisplayName` to "Paste-Me". |
 | Launch at login | Off by default; the user turns it on in Settings ▸ General. |
@@ -139,5 +140,5 @@ Select the build under the macOS version, answer the export-compliance question 
 ## Differences from the direct-download build
 
 - Data is stored in `~/Library/Containers/com.guy.PasteMe/Data/Library/Application Support/Paste Me/`, so the two builds don't share history unless iCloud sync is on in both.
-- Accessibility has to be granted to the App Store copy separately.
+- The App Store build never pastes for the user and never asks for Accessibility; it copies, and the user presses ⌘V. "Copy selection & pin it" isn't offered.
 - Updates are delivered by the App Store.

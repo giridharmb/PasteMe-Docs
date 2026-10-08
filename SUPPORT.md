@@ -1,8 +1,11 @@
 # Support
 
+**Email:** [gmb234789@gmail.com](mailto:gmb234789@gmail.com). Include your macOS version and your Paste Me version (Settings ▸ About). Paste Me is maintained by one developer; expect a reply within a few days.
+
 ## Before you ask
 
-- **Pasting doesn't work, or items are only copied:** grant Accessibility permission under System Settings ▸ Privacy & Security ▸ Accessibility. [Step-by-step guide](release/accessibility-permission.md).
+- **The item is copied but not pasted (Mac App Store version):** that's expected. The App Store version copies the item you choose; press ⌘V to paste it.
+- **Pasting doesn't work (direct-download version):** grant Accessibility permission under System Settings ▸ Privacy & Security ▸ Accessibility. [Step-by-step guide](release/accessibility-permission.md).
 - **⇧⌘V doesn't open Paste Me:** another app may already use that shortcut. Pick a different one in Settings ▸ Shortcuts.
 - **Something isn't captured:** check that capture isn't paused, that the app you copied from isn't excluded (Settings ▸ Privacy), and that the item isn't bigger than the largest-item limit (Settings ▸ History).
 - **Sync questions:** see the [FAQ](FAQ.md#icloud).
@@ -18,4 +21,7 @@ Include your macOS version, your Paste Me version (Settings ▸ About), and step
 
 ## Contact
 
-Open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues>. Paste Me is maintained by one developer, so replies usually take up to a week.
+- **Email:** [gmb234789@gmail.com](mailto:gmb234789@gmail.com) for questions, problems and anything private.
+- **GitHub:** open an issue at <https://github.com/giridharmb/PasteMe-Docs/issues> for public bug reports and feature requests.
+
+Paste Me is maintained by one developer; replies usually take a few days.

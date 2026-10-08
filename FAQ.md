@@ -9,7 +9,10 @@ Press ⇧⌘V, or click the Paste Me icon in the menu bar. You can change the sh
 Select it and press ⇧↩. You can also press ⌥⇧⌘V anywhere to paste the current clipboard as plain text.
 
 **Why does Paste Me need Accessibility access?**
-To press ⌘V in the app you're using. Without it, Paste Me still puts the item on the clipboard and you paste it yourself. [Details](release/accessibility-permission.md).
+The direct-download version uses it to press ⌘V in the app you're using. Without it, Paste Me still puts the item on the clipboard and you paste it yourself. [Details](release/accessibility-permission.md).
+
+**Why doesn't the Mac App Store version paste for me?**
+Apple allows Accessibility access in App Store apps only for accessibility features, so the App Store version doesn't ask for it. Choosing an item copies it and shows "Copied"; press ⌘V to paste. Quick Paste works the same way: ⌃⌥V and a number copies that slot.
 
 **Can I find items by the app I copied them from?**
 Yes. Use the Apps sidebar in the panel, or ⌥↑ / ⌥↓ to step through apps. ⌘0 shows all apps again and ⌘G shows or hides the sidebar.

@@ -15,6 +15,7 @@ The first public release.
 
 ### Mac App Store
 - Paste Me can now be built for the Mac App Store. That build runs in the App Sandbox, keeps its data in its own container, and remembers copied files so they can be pasted again after a restart.
+- The Mac App Store version doesn't use Accessibility (App Review Guideline 2.4.5). Choosing an item, Quick Paste and the paste shortcuts copy the item and show "Copied — press ⌘V"; "Copy selection & pin it" isn't available there.
 
 ### Improved
 - **Choosing an item pastes it.** Click an item, or press ↩, and Paste Me switches back to the app you were using and pastes. A single click now does this by default; you can switch back to double-click in Settings ▸ General. If macOS hasn't given Paste Me Accessibility access, a notice explains that the item was copied and how to fix it.

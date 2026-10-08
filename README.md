@@ -20,7 +20,7 @@
 ## Requirements
 
 - macOS 14 Sonoma or later
-- Accessibility permission, only if you want Paste Me to paste for you ([why?](release/accessibility-permission.md))
+- Accessibility permission, only if you want the direct-download version to paste for you ([why?](release/accessibility-permission.md)). The Mac App Store version copies the item and you press ⌘V; it never asks for Accessibility.
 - An iCloud account, only for sync
 
 ## Documentation
